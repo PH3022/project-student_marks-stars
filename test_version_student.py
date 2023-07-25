@@ -1,4 +1,3 @@
-# from functools import *
 import json
 
 # Принты которые отображают database_local (состояние словаря с данными созданы для наглядности и понимания процесса)
@@ -51,7 +50,8 @@ def displaying_student_marks(database_local, group_number):
 
 def group_creation_space(database_main):
     # Group_creation_space пространство для создания группы. Функция хранит в себе другие функции для взаимодействия
-    # с данными которые приходят из локальной переменной database_main. После чего возвращает измененный словарь с данными.
+    # с данными которые приходят из локальной переменной database_main. После чего возвращает измененный словарь с
+    # данными.
 
     def checking_and_creating_group(database_local):
         displaying_groups(database_local)
@@ -168,7 +168,8 @@ def data_management_space(database_main):
                             continue
                     except ValueError:
                         print(
-                            '\nВведены неверные данные. Проверьте ввод повторите попытку. Или введите (E) для выхода.\n')
+                            '\nВведены неверные данные. Проверьте ввод повторите попытку. Или введите (E)'
+                            ' для выхода.\n')
             return database_local
 
         # присваиваю главной переменной database_main словарь с измененными данными

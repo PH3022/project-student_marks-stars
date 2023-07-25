@@ -65,7 +65,8 @@ def displaying_student_marks(database_local, group_number):
 
 def group_creation_space(database_main):
     # Group_creation_space пространство для создания группы. Функция хранит в себе другие функции для взаимодействия
-    # с данными которые приходят из локальной переменной database_main. После чего возвращает измененный словарь с данными.
+    # с данными которые приходят из локальной переменной database_main. После чего возвращает измененный словарь с
+    # данными.
 
     def checking_and_creating_group(database_local):
         displaying_groups(database_local)
