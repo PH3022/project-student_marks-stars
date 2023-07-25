@@ -1,33 +1,6 @@
 import json
-student_id = "Name"
 
-try: 
-    with open('database.json', 'r') as file:
-        database_dict = json.load(file)
-except FileNotFoundError:
-    database_dict = {}
-
-except json.JSONDecodeError:
-    print("Системе не удалось прочитать файл базы данных. Данные повреждены ввиду ручного вмешательства во внутренние файлы системы или следствием повреждения данных.")
-    database_dict = {}
-    
-while True:
-    
-    while True:  
-        with open('database.json', 'w') as file:
-            json.dump(database_dict,file)
-            
-        print("Введите (1) для создания новой группы. ")
-        print("Введите (2) для перехода в раздел \"Управление данными\". Здесь вы сможете добавить студента в группу или добавить/обновить отметки.")
-        print("Введите (3) для редактирования базы данных учебного заведения ")
-        print("Введите (4) для просмотра нужной вам информации")
-        print("Введите (5) для выхода из программы")
-    
-        enter_choice = int(input("Введите нужное вам действие: "))  
-        
-        if enter_choice == 1:
-            
-            def group_number_function():
+def group_number_function():
                 if len(database_dict) == 0:
                     print("Системе не удалось найти ни одной группы. Создайте первую группу.")
                 else:
@@ -56,6 +29,37 @@ while True:
                 database_dict[group_number] = {}
                 print(database_dict)
             except: NameError
+
+
+
+
+try: 
+    with open('database.json', 'r') as file:
+        database_dict = json.load(file)
+except FileNotFoundError:
+    database_dict = {}
+
+except json.JSONDecodeError:
+    print("Системе не удалось прочитать файл базы данных. Данные повреждены ввиду ручного вмешательства во внутренние файлы системы или следствием повреждения данных.")
+    database_dict = {}
+    
+while True:
+    
+    while True:  
+        with open('database.json', 'w') as file:
+            json.dump(database_dict,file)
+            
+        print("Введите (1) для создания новой группы. ")
+        print("Введите (2) для перехода в раздел \"Управление данными\". Здесь вы сможете добавить студента в группу или добавить/обновить отметки.")
+        print("Введите (3) для редактирования базы данных учебного заведения ")
+        print("Введите (4) для просмотра нужной вам информации")
+        print("Введите (5) для выхода из программы")
+    
+        enter_choice = int(input("Введите нужное вам действие: "))  
+        
+        if enter_choice == 1:
+            
+           
             
         elif enter_choice == 2:
             print("Система обнаружила следующие группы:")
